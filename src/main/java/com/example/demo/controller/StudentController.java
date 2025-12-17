@@ -16,18 +16,17 @@ import com.example.demo.service.StudentService;
 
 @RestController
 public class StudentController {
-
     @Autowired
-    StudentService stuser;
+    StudentService studentService;
 
-    @PostMapping("/student")
-    public StudentDetail studentdata(@RequestBody StudentDetail stu) {
-        return stuser.postdata(stu);
+    @PostMapping("/postdata")
+    public Student postdata(@RequestBody Student stu) {
+        return studentService.postdata(stu);
     }
 
     @GetMapping("/getdata")
-    public List<StudentDetail> getAllStudents() {
-        return stuser.getAllStudents();
+    public List<Student> getAllStudents() {
+        return studentService.getAllStudents();
     }
 
     @GetMapping("/getdata/{id}")
