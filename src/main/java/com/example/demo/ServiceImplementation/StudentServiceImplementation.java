@@ -6,5 +6,7 @@ import com.example.demo.service.StudentService;
 
 @Service
 public class StudentServiceImplementation implements StudentService{
-
+    public Student saveStudent(Student student){
+        return 
+    }
 }
