@@ -20,8 +20,8 @@ public class StudentController {
     StudentService studentService;
 
     @PostMapping("/postdata")
-    public Student postdata(@RequestBody Student stu) {
-        return studentService.postdata(stu);
+    public Student postdata(@RequestBody Student studentService) {
+        return studentService.saveStudent(studentService);
     }
 
     @GetMapping("/getdata")
@@ -30,17 +30,17 @@ public class StudentController {
     }
 
     @GetMapping("/getdata/{id}")
-    public StudentDetail getbyid(@PathVariable int id) {
-        return stuser.getbyid(id);
+    public Student getbyid(@PathVariable int id) {
+        return studentService.getbyid(id);
     }
 
     @PutMapping("/updatedata/{id}")
-    public StudentDetail updatedata(@PathVariable int id,@RequestBody StudentDetail stu) {
-        return stuser.updatedata(id,stu);
+    public Student updatedata(@PathVariable int id,@RequestBody Student studentService) {
+        return studentService.updatedata(id,studentService);
     }
 
     @DeleteMapping("/deletedata/{id}")
-    public StudentDetail deletedata(@PathVariable int id) {
-        return stuser.deletedata(id);
+    public Student deletedata(@PathVariable int id) {
+        return studentService.deletedata(id);
     }
 }
