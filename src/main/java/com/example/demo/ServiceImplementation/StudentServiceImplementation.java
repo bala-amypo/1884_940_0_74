@@ -7,10 +7,13 @@ import com.example.demo.service.StudentService;
 
 @Service
 public class StudentServiceImplementation implements StudentService{
-    
-    private final StudentRepository StudentRepository
+
+    private final StudentRepository StudentRepository;
+    public StudentServiceImplementation(StudentRepository studentRepository){
+        this.studentRepository=studentRepository;
+    }
 
     public Student saveStudent(Student student){
-        return 
+        return studentRepository.save(student);
     }
 }
