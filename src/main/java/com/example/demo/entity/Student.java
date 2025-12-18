@@ -23,7 +23,7 @@ public class Student {
     @Size(min,max)
     @Min
     @Max
-    @Pattern(reg
+    @Pattern(reg)
     
     public Student(Long id, String name, String email) {
         this.id = id;
