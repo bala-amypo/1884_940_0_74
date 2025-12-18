@@ -1,4 +1,4 @@
-package com.example.aiml.controller;
+package com.example.demo.controller;
 
 import java.util.List;
 
