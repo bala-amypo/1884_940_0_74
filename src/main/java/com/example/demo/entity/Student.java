@@ -13,9 +13,17 @@ public class Student {
     
     private Long id;
     @NotBlank(message="Name filled cannot be empty")
-    @Size(min=3
+    @Size(min=3,max=20,message="The user name must be min of 3 and max of 20 character")
     private String name;
+    @Email(message="Invalid email id")
+    @Column(unique=true)
     private String email;
+
+    @NotNull
+    @Size(min,max)
+    @Min
+    @Max
+    @Pattern(reg
     
     public Student(Long id, String name, String email) {
         this.id = id;
