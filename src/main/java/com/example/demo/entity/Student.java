@@ -19,11 +19,12 @@ public class Student {
     @Column(unique=true)
     private String email;
 
-    @NotNull
-    @Size(min,max)
-    @Min
-    @Max
-    @Pattern(reg)
+    // @NotNull
+    // @Size(min,max)
+    // @Min
+    // @Max
+    // @Pattern(reg)
+    // @Positive
     
     public Student(Long id, String name, String email) {
         this.id = id;
