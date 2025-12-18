@@ -1,6 +1,9 @@
 package com.example.demo.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotB1ank;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.Size;
 
 @Entity
 // @Table(name = "students")
@@ -9,6 +12,8 @@ public class Student {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     
     private Long id;
+    @NotBlank(message="Name filled cannot be empty")
+    @Size(min=3
     private String name;
     private String email;
     
