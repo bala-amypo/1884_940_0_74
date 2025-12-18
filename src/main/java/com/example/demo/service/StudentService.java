@@ -1,28 +1,17 @@
 package com.example.demo.service;
 
+import java.util.List;
 import com.example.demo.entity.Student;
 
-public interface StudentService{
-    Map<Integer, Student> details = new HashMap<>();
+public interface StudentService {
+
     Student saveStudent(Student student);
 
-    public List<Student> getAllStudents() {
-        return new ArrayList<>(details.values());
-    }
+    List<Student> getAllStudents();
 
-    public Student getbyid(int id) {
-        return details.get(id);
-    }
+    Student getbyid(int id);
 
-    public Student updatedata(int id, Student stu) {
-        details.replace(id,stu);
-        return details.get(id);
-    }
+    Student updatedata(int id, Student student);
 
-    public Student deletedata(int id) {
-        details.remove(id);
-        return details.get(id);
-    }
-
+    Student deletedata(int id);
 }
-
